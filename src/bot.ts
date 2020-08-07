@@ -9,6 +9,13 @@ const client: Client = new Client()
 // @ts-ignore
 client.login(process.env.DISCORD_TOKEN)
 
+client.on('ready', () => {
+    if (client.user) {
+        client.user.setActivity('bot en heroku', {type: 'WATCHING'});
+    }
+    console.log('Listo!');
+})
+
 client.on('message', (message: Message) => {
     if (message.content === `${prefix}nosfe`) {
         const date = new Date();
