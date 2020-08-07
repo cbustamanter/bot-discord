@@ -44,9 +44,8 @@ client.on('message', (message: Message) => {
             ' **!!nosfetime:** Consulta horario de Nosfe 🕰️\n' +
             ' **!!callnosfe:** Hace un llamado a Nosfe 📟\n' +
             ' **!!pezon:** Invocar a un trapito putaku <:renzo2:596970235689566232>\n' +
-            ' **!!ajo:** Ataca a Nosfe 🧄 \n ').then((msg) => {
-                msg.react('<:escarbato:707023961183092777>');
-        })
+            ' **!!ajo:** Ataca a Nosfe 🧄 \n ');
+        message.react('<:escarbato:707023961183092777>')
     }
     if (message.content === `${prefix}ajo`) {
     	const image = new MessageAttachment('https://i.pinimg.com/originals/6a/43/b1/6a43b14ee7b3b10695bc9ad373305432.gif');
