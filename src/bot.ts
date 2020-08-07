@@ -43,7 +43,7 @@ client.on('message', (message: Message) => {
             ' !!nosfe: consulta si Nosfe está disponible ⚰️ \n' +
             ' !!nosfetime: consulta horario de Nosfe 🕰️\n' +
             ' !!callnosfe: hace un llamado a Nosfe 📟\n' +
-            ' !!pezon: Invocar a un trapito putaku :renzo2:\n' +
+            ' !!pezon: Invocar a un trapito putaku <:renzo2:741349054126096486>\n' +
             ' !!ajo: ataca a Nosfe 🧄 \n ``` ')
     }
     if (message.content === `${prefix}ajo`) {
