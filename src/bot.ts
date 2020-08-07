@@ -20,13 +20,13 @@ client.on('message', (message: Message) => {
     if (message.content === `${prefix}nosfe`) {
         const date = new Date();
         const time = date.getHours();
-        if (time > 5 && time < 15) {
-            message.channel.send('Es muy posible que a esta hora Nosfe se encuentre durmiendo, ejecuta !!nosfetime para consultar su horario.');
-        } else {
+        if (time > 1 && time < 4) {
             const image = new MessageAttachment('https://www.cinemascomics.com/wp-content/uploads/2019/10/nosferatu-1922-reboot.jpg');
             message.channel.send('Es la hora del Nosfe, ejecuta !!callnosfe para llamarlo.').then( () => {
                 message.channel.send(image)
             })
+        } else {
+            message.channel.send('Es muy posible que a esta hora Nosfe se encuentre durmiendo, ejecuta !!nosfetime para consultar su horario.');
         }
     }
     if (message.content === `${prefix}nosfetime`) {
@@ -50,6 +50,9 @@ client.on('message', (message: Message) => {
         message.channel.send(`Hiriendo al nosfe... \n🧄🧄🧄🧄🧄`).then( () =>
             message.channel.send(image)
         )
+    }
+    if (message.content === `${prefix}pezon`) {
+        message.channel.send(`<@313502945964589057> invocado`)
     }
    
 })
