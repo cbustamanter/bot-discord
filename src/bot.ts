@@ -11,7 +11,7 @@ client.login(process.env.DISCORD_TOKEN)
 
 client.on('ready', () => {
     if (client.user) {
-        client.user.setActivity('bot en heroku', {type: 'WATCHING'});
+        client.user.setActivity('cosas brillantes', {type: 'WATCHING'});
     }
     console.log('Listo!');
 })
@@ -43,6 +43,7 @@ client.on('message', (message: Message) => {
             ' !!nosfe: consulta si Nosfe está disponible ⚰️ \n' +
             ' !!nosfetime: consulta horario de Nosfe 🕰️\n' +
             ' !!callnosfe: hace un llamado a Nosfe 📟\n' +
+            ' !!pezon: Invocar a un trapito putaku 📟\n' +
             ' !!ajo: ataca a Nosfe 🧄 \n ``` ')
     }
     if (message.content === `${prefix}ajo`) {
