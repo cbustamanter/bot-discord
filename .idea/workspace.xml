@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="35d29e6a-a738-43b9-bbc2-8eef787bc454" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fj7Y1nkFDY491FhCZ7YwoU35VY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="35d29e6a-a738-43b9-bbc2-8eef787bc454" name="Default Changelist" comment="" />
+      <created>1596719693262</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596719693262</updated>
+      <workItem from="1596719694784" duration="1497000" />
+      <workItem from="1596721200762" duration="3267000" />
+      <workItem from="1596724687423" duration="2000" />
+      <workItem from="1596730880969" duration="1381000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2595" y="312" width="559" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596720044647">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2595" y="312" width="559" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.993/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596720044647" />
+  </component>
+</project>
