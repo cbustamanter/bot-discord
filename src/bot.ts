@@ -46,6 +46,7 @@ client.on('message', (message: Message) => {
             ' **!!callnosfe:** Hace un llamado a Nosfe 📟\n' +
             ' **!!pezon:** Invocar a un trapito putaku <:renzo2:596970235689566232>\n' +
             ' **!!profe:** Invocar al rey de los camarones CHAAAAAA 🔥\n' +
+            ' **!!estaca:** Usar con cuidado, éste comando puede acabar definitivamente con nosfe 🩸\n' +
             ' **!!ajo:** Ataca a Nosfe 🧄 \n ').then(value => value.react('707023961183092777'));
     }
     if (message.content === `${prefix}ajo`) {
@@ -64,5 +65,12 @@ client.on('message', (message: Message) => {
         }
         );
     }
-   
+
+    if(message.content === `${prefix}estaca`) {
+        const image = 'https://static.tvtropes.org/pmwiki/pub/images/dracula-1_6352.jpg'
+        message.channel.send(`Estás muy cerca de asesinar a nosfe`).then( () => {
+                message.channel.send(image).then(value => value.react('🩸'))
+            }
+        );
+    }
 })
