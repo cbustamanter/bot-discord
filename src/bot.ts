@@ -45,6 +45,7 @@ client.on('message', (message: Message) => {
             ' **!!nosfetime:** Consulta horario de Nosfe 🕰️\n' +
             ' **!!callnosfe:** Hace un llamado a Nosfe 📟\n' +
             ' **!!pezon:** Invocar a un trapito putaku <:renzo2:596970235689566232>\n' +
+            ' **!!profe:** Invocar al rey de los camarones CHAAAAAA 🔥\n' +
             ' **!!ajo:** Ataca a Nosfe 🧄 \n ').then(value => value.react('707023961183092777'));
     }
     if (message.content === `${prefix}ajo`) {
