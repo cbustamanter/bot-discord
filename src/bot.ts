@@ -56,5 +56,12 @@ client.on('message', (message: Message) => {
     if (message.content === `${prefix}pezon`) {
         message.channel.send(`<@313502945964589057> invocado`).then(value => value.react('🍿'));
     }
+    if(message.content === `${prefix}profe`) {
+        const image = new MessageAttachment('https://i0.wp.com/www.thatmomentin.com/wp-content/uploads/2015/08/bubbl-1.jpg');
+        message.channel.send(`<@560481541986189348> CHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`).then( () => {
+            message.channel.send(image).then(value => value.react('🔥'))
+        }
+        );
+    }
    
 })
