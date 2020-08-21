@@ -71,8 +71,12 @@ client.on('message', (message: Message) => {
     }
     if (message.content === `${prefix}riko`) {
         message.channel.send(`BOSSU, ilumínanos <@461965694016421888>`).then( () => {
-            message.channel.send('https://i.ytimg.com/vi/t_CfXd0zLYI/maxresdefault.jpg')
+            message.channel.send('https://i.ytimg.com/vi/gyqCZwVFkL8/hqdefault.jpg')
         })
+    }
+    if (message.content === `${prefix}kinkurimson`) {
+        message.channel.send(message.author.id)
+        //message.channel.send(Attachment('https://i.ytimg.com/vi/t_CfXd0zLYI/maxresdefault.jpg'))
     }
 
 })
