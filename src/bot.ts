@@ -47,6 +47,7 @@ client.on('message', (message: Message) => {
             ' **!!profe:** Invocar al rey de los camarones CHAAAAAA 🔥\n' +
             ' **!!riko** Para esas noches de soledad ' +
             ' **!!estaca:** Usar con cuidado, éste comando puede acabar definitivamente con nosfe 🩸\n' +
+            ' **!!kinkurimson:** Activa el poder de Kin Kurimson (solo puede ser activado por el pack master) 🩸\n' +
             ' **!!ajo:** Ataca a Nosfe 🧄 \n ').then(value => value.react('707023961183092777'));
     }
     if (message.content === `${prefix}ajo`) {
@@ -75,8 +76,8 @@ client.on('message', (message: Message) => {
         })
     }
     if (message.content === `${prefix}kinkurimson`) {
-        message.channel.send(message.author.id)
-        //message.channel.send(Attachment('https://i.ytimg.com/vi/t_CfXd0zLYI/maxresdefault.jpg'))
+        if (message.author.id === '461965694016421888') {
+            message.channel.send(Attachment('https://i.ytimg.com/vi/t_CfXd0zLYI/maxresdefault.jpg'))
+        }
     }
-
 })
