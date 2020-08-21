@@ -45,7 +45,7 @@ client.on('message', (message: Message) => {
             ' **!!callnosfe:** Hace un llamado a Nosfe 📟\n' +
             ' **!!pezon:** Invocar a un trapito putaku <:renzo2:596970235689566232>\n' +
             ' **!!profe:** Invocar al rey de los camarones CHAAAAAA 🔥\n' +
-            ' **!!riko** Para esas noches de soledad ' +
+            ' **!!riko** Para esas noches de soledad \n' +
             ' **!!estaca:** Usar con cuidado, éste comando puede acabar definitivamente con nosfe 🩸\n' +
             ' **!!kinkurimson:** Activa el poder de Kin Kurimson (solo puede ser activado por el pack master) \n' +
             ' **!!ajo:** Ataca a Nosfe 🧄 \n ').then(value => value.react('707023961183092777'));
