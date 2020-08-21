@@ -69,7 +69,7 @@ client.on('message', (message: Message) => {
             }
         );
     }
-    if (message.content === `${prefix}estaca`) {
+    if (message.content === `${prefix}riko`) {
         message.channel.send(`BOSSU, ilumínanos <@461965694016421888>`).then( () => {
             message.channel.send('https://i.ytimg.com/vi/t_CfXd0zLYI/maxresdefault.jpg')
         })
