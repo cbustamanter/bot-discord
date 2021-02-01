@@ -1,5 +1,5 @@
 import {config} from 'dotenv';
-import {Client, Message, MessageAttachment} from 'discord.js'
+import {Client, Message, TextChannel} from 'discord.js'
 import  {prefix} from './config.json';
 import {Attachment} from './functions'
 
@@ -13,6 +13,11 @@ client.login(process.env.DISCORD_TOKEN)
 client.on('ready', () => {
     if (client.user) {
         client.user.setActivity('cosas brillantes', {type: 'WATCHING'});
+        let channel = client.channels.cache.get('740926588274737245');
+        let txtChannel = (channel as TextChannel);
+        txtChannel.send(`HE VUELTO`).then( () => {
+            txtChannel.send(Attachment('https://i.pinimg.com/originals/78/9f/97/789f9701531733ee07f95657caa0cb30.jpg'))
+        })
     }
     console.log('Listo!');
 })

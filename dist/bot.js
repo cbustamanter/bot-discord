@@ -4,7 +4,6 @@ const dotenv_1 = require("dotenv");
 const discord_js_1 = require("discord.js");
 const config_json_1 = require("./config.json");
 const functions_1 = require("./functions");
-const requets_1 = require("./requets");
 dotenv_1.config();
 const client = new discord_js_1.Client();
 // @ts-ignore
@@ -12,6 +11,11 @@ client.login(process.env.DISCORD_TOKEN);
 client.on('ready', () => {
     if (client.user) {
         client.user.setActivity('cosas brillantes', { type: 'WATCHING' });
+        let channel = client.channels.cache.get('740926588274737245');
+        let txtChannel = channel;
+        txtChannel.send(`HE VUELTO`).then(() => {
+            txtChannel.send(functions_1.Attachment('https://i.pinimg.com/originals/78/9f/97/789f9701531733ee07f95657caa0cb30.jpg'));
+        });
     }
     console.log('Listo!');
 });
@@ -44,9 +48,9 @@ client.on('message', (message) => {
             ' **!!callnosfe:** Hace un llamado a Nosfe 📟\n' +
             ' **!!pezon:** Invocar a un trapito putaku <:renzo2:596970235689566232>\n' +
             ' **!!profe:** Invocar al rey de los camarones CHAAAAAA 🔥\n' +
-            ' **!!riko** Para esas noches de soledad ' +
+            ' **!!riko** Para esas noches de soledad \n' +
             ' **!!estaca:** Usar con cuidado, éste comando puede acabar definitivamente con nosfe 🩸\n' +
-            ' **!!kinkurimson:** Activa el poder de Kin Kurimson (solo puede ser activado por el pack master) 🩸\n' +
+            ' **!!kinkurimson:** Activa el poder de Kin Kurimson (solo puede ser activado por el pack master) \n' +
             ' **!!ajo:** Ataca a Nosfe 🧄 \n ').then(value => value.react('707023961183092777'));
     }
     if (message.content === `${config_json_1.prefix}ajo`) {
@@ -74,9 +78,9 @@ client.on('message', (message) => {
         if (message.author.id === '461965694016421888') {
             message.channel.send(functions_1.Attachment('https://i.ytimg.com/vi/t_CfXd0zLYI/maxresdefault.jpg'));
         }
-    }
-    if (message.content === `${config_json_1.prefix}test`) {
-        console.log('está funcionando');
-        requets_1.getRapidImage();
+        else {
+            const authorId = message.author.id;
+            message.channel.send(`<@${authorId}> parece que no tienes lo que requiere para activar éste poder`);
+        }
     }
 });
