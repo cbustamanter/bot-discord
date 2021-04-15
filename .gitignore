@@ -72,6 +72,8 @@ jspm_packages
 
 # Yarn Integrity file
 .yarn-integrity
+# dist
+dist
 
 # Env
 .env
