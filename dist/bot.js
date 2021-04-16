@@ -12,14 +12,23 @@ const client = new Commando.CommandoClient({
 });
 // @ts-ignore
 client.login(process.env.DISCORD_TOKEN);
+client.registry
+    .registerDefaultTypes()
+    .registerGroups([
+    ["misc", "misc commands"],
+    ["moderation", "moderation commands"],
+])
+    .registerDefaultGroups()
+    .registerDefaultCommands({
+    help: false,
+    prefix: false,
+    ping: false,
+    _eval: false,
+    unknownCommand: true,
+    commandState: true
+})
+    .registerCommandsIn(path.join(__dirname, "../src/cmds"));
 client.on("ready", () => {
-    client.registry
-        .registerGroups([
-        ["misc", "misc commands"],
-        ["moderation", "moderation commands"],
-    ])
-        .registerDefaults()
-        .registerCommandsIn(path.join(__dirname, "../src/cmds"));
     if (client.user) {
         client.user.setActivity("cosas brillantes", { type: "WATCHING" });
         /*  let channel = client.channels.cache.get('436550759908376576');
@@ -74,7 +83,8 @@ client.on("message", (message) => {
             " **!!riko** Para esas noches de soledad \n" +
             " **!!estaca:** Usar con cuidado, éste comando puede acabar definitivamente con nosfe 🩸\n" +
             " **!!kinkurimson:** Activa el poder de Kin Kurimson (solo puede ser activado por el pack master) \n" +
-            " **!!ajo:** Ataca a Nosfe 🧄 \n ")
+            " **!!ajo:** Ataca a Nosfe 🧄 \n " +
+            " **!!play :** Reproduce audio. Audios disponibles: camarones, dura, medejaronsolo, nena, proferisa, toyready ")
             .then((value) => value.react("707023961183092777"));
     }
     if (message.content === `${config_json_1.prefix}ajo`) {
