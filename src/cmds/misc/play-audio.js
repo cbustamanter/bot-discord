@@ -27,7 +27,8 @@ module.exports = class PlayAudioCommand extends Commando.Command {
       subCmd == "nena" ||
       subCmd == "camarones" ||
       subCmd == "dura" ||
-      subCmd == "medejaronsolo"
+      subCmd == "medejaronsolo" ||
+      subCmd == "atrapada"
     ) {
       voice.channel.join().then((connection) => {
         connection.play(path.join(__dirname, `../../files/${subCmd}.ogg`));

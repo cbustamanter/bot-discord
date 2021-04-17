@@ -90,16 +90,16 @@ client.on("message", (message: Message) => {
     message.channel
       .send(
         "💁🏻 ***Comandos actuales:*** \n" +
-          " **!!nosfe:** Consulta si Nosfe está disponible ⚰️ \n" +
-          " **!!nosfetime:** Consulta horario de Nosfe 🕰️\n" +
-          " **!!callnosfe:** Hace un llamado a Nosfe 📟\n" +
-          " **!!pezon:** Invocar a un trapito putaku <:renzo2:596970235689566232>\n" +
-          " **!!profe:** Invocar al rey de los camarones CHAAAAAA 🔥\n" +
-          " **!!riko** Para esas noches de soledad \n" +
-          " **!!estaca:** Usar con cuidado, éste comando puede acabar definitivamente con nosfe 🩸\n" +
-          " **!!kinkurimson:** Activa el poder de Kin Kurimson (solo puede ser activado por el pack master) \n" +
-          " **!!ajo:** Ataca a Nosfe 🧄 \n" +
-          " **!!play :** Reproduce audio. Audios disponibles: camarones, dura, medejaronsolo, nena, proferisa, toyready " 
+          " **??nosfe:** Consulta si Nosfe está disponible ⚰️ \n" +
+          " **??nosfetime:** Consulta horario de Nosfe 🕰️\n" +
+          " **??callnosfe:** Hace un llamado a Nosfe 📟\n" +
+          " **??pezon:** Invocar a un trapito putaku <:renzo2:596970235689566232>\n" +
+          " **??profe:** Invocar al rey de los camarones CHAAAAAA 🔥\n" +
+          " **??riko** Para esas noches de soledad \n" +
+          " **??estaca:** Usar con cuidado, éste comando puede acabar definitivamente con nosfe 🩸\n" +
+          " **??kinkurimson:** Activa el poder de Kin Kurimson (solo puede ser activado por el pack master) \n" +
+          " **??ajo:** Ataca a Nosfe 🧄 \n" +
+          " **??play :** Reproduce audio. Audios disponibles: camarones, dura, medejaronsolo, nena, proferisa, toyready " 
       )
       .then((value) => value.react("707023961183092777"));
   }
