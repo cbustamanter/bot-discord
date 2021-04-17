@@ -4,9 +4,9 @@ const path = require("path");
 module.exports = class PlayAudioCommand extends Commando.Command {
   constructor(client) {
     super(client, {
-      name: "play",
+      name: "p",
       group: "misc",
-      memberName: "play",
+      memberName: "p",
       description: "Plays some audio",
     });
   }
@@ -29,7 +29,8 @@ module.exports = class PlayAudioCommand extends Commando.Command {
       subCmd == "dura" ||
       subCmd == "medejaronsolo" ||
       subCmd == "atrapada" ||
-      subCmd == "piensachato"
+      subCmd == "piensachato" ||
+      subCmd == "tuturu"
     ) {
       voice.channel.join().then((connection) => {
         connection.play(path.join(__dirname, `../../files/${subCmd}.ogg`));
