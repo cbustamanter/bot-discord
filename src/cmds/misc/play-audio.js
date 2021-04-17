@@ -12,6 +12,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
   }
 
   async run(message) {
+    let timeoutID;
     const { voice } = message.member;
     const { content } = message;
     const options = content.split(" ");
@@ -30,11 +31,20 @@ module.exports = class PlayAudioCommand extends Commando.Command {
       subCmd == "medejaronsolo" ||
       subCmd == "atrapada" ||
       subCmd == "piensachato" ||
-      subCmd == "tuturu"
+      subCmd == "tuturu" ||
+      subCmd == "kc" ||
+      subCmd == "omaewa" ||
+      subCmd == "zawarudo"
     ) {
       voice.channel.join().then((connection) => {
         connection.play(path.join(__dirname, `../../files/${subCmd}.ogg`));
+        timeoutID = setTimeout(() => {
+          console.log('dc');
+          connection.disconnect();
+        }, 300000); // 5 min
       });
     }
+    clearTimeout(timeoutID);
+    timeoutID = undefined;
   }
 };

@@ -24,8 +24,8 @@ client.registry
     prefix: false,
     ping: false,
     _eval: false,
-    unknownCommand: true,
-    commandState: true
+    unknownCommand: false,
+    commandState: true,
 })
     .registerCommandsIn(path.join(__dirname, "../src/cmds"));
 client.on("ready", () => {
@@ -38,6 +38,18 @@ client.on("ready", () => {
             }) */
     }
     console.log("Listo!");
+});
+client.on("voiceStateUpdate", (oldState, newState) => {
+    var _a;
+    if (oldState.channelID !== oldState.guild.me.voice.channelID ||
+        newState.channel)
+        return;
+    if (((_a = oldState.channel) === null || _a === void 0 ? void 0 : _a.members.size) == 1)
+        setTimeout(() => {
+            var _a;
+            if (((_a = oldState.channel) === null || _a === void 0 ? void 0 : _a.members.size) == 1)
+                oldState.channel.leave();
+        }, 100);
 });
 client.on("message", (message) => {
     if (message.content === `${config_json_1.prefix}nosfe`) {
@@ -75,16 +87,16 @@ client.on("message", (message) => {
     if (message.content === `${config_json_1.prefix}help`) {
         message.channel
             .send("💁🏻 ***Comandos actuales:*** \n" +
-            " **!!nosfe:** Consulta si Nosfe está disponible ⚰️ \n" +
-            " **!!nosfetime:** Consulta horario de Nosfe 🕰️\n" +
-            " **!!callnosfe:** Hace un llamado a Nosfe 📟\n" +
-            " **!!pezon:** Invocar a un trapito putaku <:renzo2:596970235689566232>\n" +
-            " **!!profe:** Invocar al rey de los camarones CHAAAAAA 🔥\n" +
-            " **!!riko** Para esas noches de soledad \n" +
-            " **!!estaca:** Usar con cuidado, éste comando puede acabar definitivamente con nosfe 🩸\n" +
-            " **!!kinkurimson:** Activa el poder de Kin Kurimson (solo puede ser activado por el pack master) \n" +
-            " **!!ajo:** Ataca a Nosfe 🧄 \n " +
-            " **!!play :** Reproduce audio. Audios disponibles: camarones, dura, medejaronsolo, nena, proferisa, toyready ")
+            " **??nosfe:** Consulta si Nosfe está disponible ⚰️ \n" +
+            " **??nosfetime:** Consulta horario de Nosfe 🕰️\n" +
+            " **??callnosfe:** Hace un llamado a Nosfe 📟\n" +
+            " **??pezon:** Invocar a un trapito putaku <:renzo2:596970235689566232>\n" +
+            " **??profe:** Invocar al rey de los camarones CHAAAAAA 🔥\n" +
+            " **??riko** Para esas noches de soledad \n" +
+            " **??estaca:** Usar con cuidado, éste comando puede acabar definitivamente con nosfe 🩸\n" +
+            " **??kinkurimson:** Activa el poder de Kin Kurimson (solo puede ser activado por el pack master) \n" +
+            " **??ajo:** Ataca a Nosfe 🧄 \n" +
+            " **??p :** Reproduce audio. Audios disponibles: camarones, dura, medejaronsolo, nena, proferisa, toyready, piensachato, atrapada ")
             .then((value) => value.react("707023961183092777"));
     }
     if (message.content === `${config_json_1.prefix}ajo`) {
