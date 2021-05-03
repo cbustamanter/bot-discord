@@ -111,8 +111,8 @@ client.on("message", (message: Message) => {
           " **??estaca:** Usar con cuidado, éste comando puede acabar definitivamente con nosfe 🩸\n" +
           " **??kinkurimson:** Activa el poder de Kin Kurimson (solo puede ser activado por el pack master) \n" +
           " **??ajo:** Ataca a Nosfe 🧄 \n" +
-          " **??p :** Reproduce audio. Audios disponibles: camarones, dura, medejaronsolo, nena, proferisa, toyready, piensachato, atrapada, " +
-          " omaewa, kc, zawarudo, aea, kuristina, nya, okarin, sob"
+          " **??p :** Reproduce audio. Audios disponibles: camarones, dura, medejaronsolo, nena, proferisa, toyready, piensachato, atrapada, \n" +
+          " omaewa, kc, zawarudo, aea, kurisutina, nya, okarin, sob, desu"
       )
       .then((value) => value.react("707023961183092777"));
   }
