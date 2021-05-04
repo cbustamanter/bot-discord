@@ -162,7 +162,10 @@ client.on("message", (message: Message) => {
     });
   }
   if (message.content === `${prefix}kinkurimson`) {
-    if (message.author) {
+    message.channel.send(
+      Attachment("https://i.ytimg.com/vi/t_CfXd0zLYI/maxresdefault.jpg")
+    );
+    /* if (message.author.id === "461965694016421888") {
       message.channel.send(
         Attachment("https://i.ytimg.com/vi/t_CfXd0zLYI/maxresdefault.jpg")
       );
@@ -171,6 +174,6 @@ client.on("message", (message: Message) => {
       message.channel.send(
         `<@${authorId}> parece que no tienes lo que requiere para activar éste poder`
       );
-    }
+    } */
   }
 });
