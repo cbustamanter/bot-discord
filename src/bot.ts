@@ -112,7 +112,7 @@ client.on("message", (message: Message) => {
           " **??kinkurimson:** Activa el poder de Kin Kurimson (solo puede ser activado por el pack master) \n" +
           " **??ajo:** Ataca a Nosfe 🧄 \n" +
           " **??p :** Reproduce audio. Audios disponibles: camarones, dura, medejaronsolo, nena, proferisa, toyready, piensachato, atrapada, \n" +
-          " omaewa, kc, zawarudo, aea, kurisutina, nya, okarin, sob, desu, psy"
+          " omaewa, kc, zawarudo, aea, kurisutina, nya, okarin, sob, desu, psy, yare"
       )
       .then((value) => value.react("707023961183092777"));
   }
