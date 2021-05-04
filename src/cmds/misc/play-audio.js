@@ -36,7 +36,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
       subCmd == "omaewa" ||
       subCmd == "zawarudo" ||
       subCmd == "aea" ||
-      subCmd == "kuristina" ||
+      subCmd == "kurisutina" ||
       subCmd == "nya" ||
       subCmd == "okarin" ||
       subCmd == "sob" ||
