@@ -162,7 +162,7 @@ client.on("message", (message: Message) => {
     });
   }
   if (message.content === `${prefix}kinkurimson`) {
-    if (message.author.id === "461965694016421888") {
+    if (message.author) {
       message.channel.send(
         Attachment("https://i.ytimg.com/vi/t_CfXd0zLYI/maxresdefault.jpg")
       );
