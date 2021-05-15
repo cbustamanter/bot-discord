@@ -42,6 +42,7 @@ module.exports = class PlayAudioCommand extends Commando.Command {
       subCmd == "sob" ||
       subCmd == "psy" ||
       subCmd == "yare" ||
+      subCmd == "ah" ||
       subCmd == "desu" 
     ) {
       voice.channel.join().then((connection) => {
