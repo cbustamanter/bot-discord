@@ -43,13 +43,15 @@ module.exports = class PlayAudioCommand extends Commando.Command {
       subCmd == "psy" ||
       subCmd == "yare" ||
       subCmd == "desu" ||
-      subCmd == "eseplato"
-      subCmd == "200"  
+      subCmd == "eseplato" ||
+      subCmd == "200" ||
+      subCmd == "ah" ||
+      subCmd == "desu"
     ) {
       voice.channel.join().then((connection) => {
         connection.play(path.join(__dirname, `../../files/${subCmd}.ogg`));
         timeoutID = setTimeout(() => {
-          console.log('dc');
+          console.log("dc");
           connection.disconnect();
         }, 300000); // 5 min
       });
